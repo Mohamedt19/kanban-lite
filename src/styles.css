@@ -1,0 +1,341 @@
+:root {
+    --bg: #f3f4f6;
+    --panel: #ffffff;
+    --text: #111827;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  
+    --btn: #111827;
+    --btnText: #ffffff;
+  
+    --dangerBg: #fee2e2;
+    --dangerText: #b91c1c;
+    --dangerBorder: #fecaca;
+  
+    --radius: 12px;
+  }
+  
+  * { box-sizing: border-box; }
+  
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    background: var(--bg);
+    color: var(--text);
+  }
+  
+  /* App */
+  .app {
+    max-width: 1000px;
+    margin: 32px auto;
+    padding: 0 16px 60px;
+  }
+  
+  .heroTitle {
+    margin: 0;
+    font-size: 36px;
+    letter-spacing: -0.02em;
+  }
+  
+  .heroSub {
+    margin: 6px 0 0;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  
+  /* Panels */
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 14px;
+    margin-top: 12px;
+  }
+  
+  .panelTitle {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  /* Forms */
+  .formRow { margin-top: 10px; }
+  
+  .input, .select, .textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 12px;
+    outline: none;
+    background: white;
+    color: var(--text);
+  }
+  
+  .textarea { resize: vertical; }
+  
+  .input:focus, .textarea:focus, .select:focus {
+    border-color: #cbd5e1;
+    box-shadow: 0 0 0 4px rgba(15, 23, 42, 0.08);
+  }
+  
+  .formActions {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .hint {
+    color: var(--muted);
+    font-size: 12px;
+  }
+  
+  /* Search row */
+  .rowBetween {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+  }
+  
+  .grow {
+    flex: 1;
+    min-width: 240px;
+  }
+  
+  /* Pills */
+  .pill {
+    font-size: 12px;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: white;
+  }
+  
+  /* Buttons */
+  .btn, .btnPrimary, .btnDanger {
+    height: 36px;
+    padding: 0 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: white;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text);
+  }
+  
+  .btn:hover { background: #f9fafb; }
+  
+  .btnPrimary {
+    background: var(--btn);
+    border-color: var(--btn);
+    color: var(--btnText);
+  }
+  
+  .btnPrimary:hover { opacity: 0.92; }
+  
+  .btnDanger {
+    background: var(--dangerBg);
+    border-color: var(--dangerBorder);
+    color: var(--dangerText);
+  }
+  
+  /* Tabs */
+  .tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  
+  .tab {
+    border: 1px solid var(--border);
+    background: white;
+    border-radius: 999px;
+    padding: 8px 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text);
+  }
+  
+  .tab:hover { background: #f9fafb; }
+  
+  .tabActive {
+    background: #111827;
+    border-color: #111827;
+    color: white;
+  }
+  
+  .tabCount {
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: white;
+    color: var(--text);
+  }
+  
+  .tabActive .tabCount {
+    border-color: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+  }
+  
+  /* Board layout */
+  .board {
+    margin-top: 14px;
+    display: grid;
+    gap: 14px;
+    grid-template-columns: 1fr;
+  }
+  
+  @media (min-width: 900px) {
+    .board { grid-template-columns: 1fr 1fr 1fr; }
+  }
+  
+  /* Column */
+  .col {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 12px;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .colHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .colTitle {
+    font-weight: 800;
+    font-size: 14px;
+  }
+  
+  .colList {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .colHint {
+    margin-top: auto;
+    padding-top: 10px;
+    color: var(--muted);
+    font-size: 12px;
+  }
+  
+  /* Drag & drop */
+  .draggable { cursor: grab; }
+  .draggable:active { cursor: grabbing; }
+  
+  .colOver {
+    outline: 2px dashed #cbd5e1;
+    outline-offset: 2px;
+    background: #f8fafc;
+  }
+  
+  /* Cards */
+  .card {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px;
+    background: white;
+  }
+  
+  .cardTitleRow {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .cardTitle { font-weight: 800; }
+  
+  .cardDesc {
+    margin-top: 6px;
+    color: #374151;
+    font-size: 13px;
+    line-height: 1.35;
+    word-break: break-word;
+  }
+  
+  .tiny {
+    color: var(--muted);
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  
+  .cardActions {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  
+  .editStack {
+    display: grid;
+    gap: 8px;
+  }
+  
+  /* Empty state (column) */
+  .emptySmall {
+    border: 1px dashed #d1d5db;
+    border-radius: 12px;
+    padding: 12px;
+    background: #fafafa;
+    color: var(--muted);
+  }
+  
+  .emptyIcon {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: #e5e7eb;
+    margin-bottom: 10px;
+  }
+  
+  /* Optional: tiny floating icon */
+  .emptySmall .emptyIcon {
+    animation: float 2.2s ease-in-out infinite;
+  }
+  
+  .emptyTitle {
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  
+  .emptyText {
+    font-size: 13px;
+  }
+  
+  /* Pop in animation */
+  .emptyPop {
+    animation: pop 220ms ease-out;
+  }
+  
+  @keyframes pop {
+    from { transform: translateY(6px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0px); opacity: 0.7; }
+    50% { transform: translateY(-6px); opacity: 1; }
+    100% { transform: translateY(0px); opacity: 0.7; }
+  }
