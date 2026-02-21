@@ -1,7 +1,10 @@
 # 🗂️ Kanban Lite
 
 A clean Kanban board built with React + TypeScript.
+## 🌐 Live Demo
 
+Try it here:
+https://kanban-lite-ashy.vercel.app/
 ## ✨ Features
 
 - Drag & drop tasks
