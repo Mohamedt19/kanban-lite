@@ -1,17 +1,19 @@
 # 🗂️ Kanban Lite
 
-A clean Kanban board built with React + TypeScript.
+A lightweight Kanban board built with React and TypeScript to organize tasks and track progress visually.
+
 ## 🌐 Live Demo
+https://kanban-lite-ashy.vercel.app/
 
 Try it here:
 https://kanban-lite-ashy.vercel.app/
 ## ✨ Features
 
-- Drag & drop tasks
-- Tabs filtering
+- Drag & drop tasks between columns
+- Tabs filtering (All / Backlog / In Progress / Done)
 - Local storage persistence
-- Smooth UI & animations
-- Empty states & polish
+- Smooth UI interactions & animations
+- Clean empty states & UX polish
 
 ## 🛠 Tech Stack
 
@@ -22,4 +24,13 @@ https://kanban-lite-ashy.vercel.app/
 
 ## 📸 Preview
 
-![Kanban Lite Screenshot](public/preview.png)
+![Kanban Lite Screenshot](./preview.png)
+
+## 🚀 Run locally
+
+npm install  
+npm run dev
+
+## 🎯 Purpose
+
+Built to practice state management, drag-and-drop interactions, and creating intuitive productivity interfaces.
